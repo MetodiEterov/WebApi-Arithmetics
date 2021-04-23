@@ -7,6 +7,9 @@ using RestSharp;
 
 namespace ServiceLayer
 {
+    /// <summary>
+    /// MathWebClient class, responsible for whole business logic
+    /// </summary>
     public class MathWebClient : IMathWebClient
     {
         private readonly ILoggerManager _loggerManager;
@@ -18,6 +21,12 @@ namespace ServiceLayer
             _loggerManager = loggerManager;
         }
 
+        /// <summary>
+        /// Add method, adding two numbers
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public int Add(int a, int b)
         {
             var sum = _restClient.Get(new RestRequest($"add?a={a}&b={b}", Method.GET)).Content;
@@ -28,6 +37,12 @@ namespace ServiceLayer
             return a + b;
         }
 
+        /// <summary>
+        /// Divide method, divide two numbers
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public int Divide(int a, int b)
         {
             var quotient = _restClient.Get(new RestRequest($"divide?a={a}&b={b}", Method.GET)).Content;
@@ -38,6 +53,12 @@ namespace ServiceLayer
             return a / b;
         }
 
+        /// <summary>
+        /// Multiply method, mulyiply two numbers
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public int Multiply(int a, int b)
         {
             var product = _restClient.Get(new RestRequest($"multiply?a={a}&b={b}", Method.GET)).Content;

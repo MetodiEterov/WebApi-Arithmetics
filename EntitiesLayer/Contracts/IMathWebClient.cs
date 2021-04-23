@@ -1,5 +1,8 @@
 ﻿namespace EntitiesLayer
 {
+    /// <summary>
+    /// IMathWebClient business logic interface
+    /// </summary>
     public interface IMathWebClient
     {
         int Add(int a, int b);

@@ -7,6 +7,9 @@ using EntitiesLayer;
 
 namespace WebApiLayer.Controllers
 {
+    /// <summary>
+    /// MathController class contains arithmetics methods
+    /// </summary>
     public class MathController : ApiController
     {
         private readonly IMathWebClient _mathWebClient;
@@ -16,6 +19,12 @@ namespace WebApiLayer.Controllers
             _mathWebClient = mathWebClient;
         }
 
+        /// <summary>
+        /// Add method, adding two numbers
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public HttpResponseMessage Add(int a, int b)
         {
             var response = new HttpResponseMessage(HttpStatusCode.OK)
@@ -26,6 +35,12 @@ namespace WebApiLayer.Controllers
             return response;
         }
 
+        /// <summary>
+        /// Divide method, divide two numbers
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public HttpResponseMessage Divide(int a, int b)
         {
             if (a == 0 || b == 0) return new HttpResponseMessage(HttpStatusCode.InternalServerError);
@@ -38,6 +53,12 @@ namespace WebApiLayer.Controllers
             return response;
         }
 
+        /// <summary>
+        /// Multiply method, mulyiply two numbers
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public HttpResponseMessage Multiply(int a, int b)
         {
             var response = new HttpResponseMessage(HttpStatusCode.OK)
