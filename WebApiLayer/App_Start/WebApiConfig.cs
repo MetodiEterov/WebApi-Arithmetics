@@ -13,8 +13,15 @@ using WebApiLayer.Models;
 
 namespace WebApiLayer
 {
+    /// <summary>
+    /// WebApiConfig class
+    /// </summary>
     public static class WebApiConfig
     {
+        /// <summary>
+        /// Register static method
+        /// </summary>
+        /// <param name="config"></param>
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services

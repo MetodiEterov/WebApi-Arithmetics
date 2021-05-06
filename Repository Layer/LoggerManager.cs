@@ -40,6 +40,9 @@ namespace RepositoryLayer
             return false;
         }
 
+        /// <summary>
+        /// Dispose method
+        /// </summary>
         void IDisposable.Dispose()
         {
             throw new NotImplementedException();

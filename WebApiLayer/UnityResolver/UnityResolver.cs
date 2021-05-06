@@ -6,6 +6,9 @@ using Unity;
 
 namespace WebApiLayer.Models
 {
+    /// <summary>
+    /// UnityResolver class
+    /// </summary>
     public class UnityResolver : IDependencyResolver
     {
         protected IUnityContainer container;
@@ -15,6 +18,11 @@ namespace WebApiLayer.Models
             this.container = container ?? throw new ArgumentNullException(nameof(container));
         }
 
+        /// <summary>
+        /// GetService method
+        /// </summary>
+        /// <param name="serviceType"></param>
+        /// <returns></returns>
         public object GetService(Type serviceType)
         {
             try
@@ -29,6 +37,11 @@ namespace WebApiLayer.Models
             }
         }
 
+        /// <summary>
+        /// GetServices method
+        /// </summary>
+        /// <param name="serviceType"></param>
+        /// <returns></returns>
         public IEnumerable<object> GetServices(Type serviceType)
         {
             try
@@ -43,17 +56,28 @@ namespace WebApiLayer.Models
             }
         }
 
+        /// <summary>
+        /// BeginScope method
+        /// </summary>
+        /// <returns></returns>
         public IDependencyScope BeginScope()
         {
             var child = container.CreateChildContainer();
             return new UnityResolver(child);
         }
 
+        /// <summary>
+        /// Dispose method
+        /// </summary>
         public void Dispose()
         {
             Dispose(true);
         }
 
+        /// <summary>
+        /// Dispose virtual method
+        /// </summary>
+        /// <param name="disposing"></param>
         protected virtual void Dispose(bool disposing)
         {
             container.Dispose();
