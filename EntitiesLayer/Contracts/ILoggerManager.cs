@@ -1,7 +1,7 @@
 ﻿namespace EntitiesLayer
 {
     /// <summary>
-    /// ILoggerManager logger interface
+    /// Basic logger interface
     /// </summary>
     public interface ILoggerManager
     {
