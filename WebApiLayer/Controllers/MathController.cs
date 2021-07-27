@@ -8,7 +8,7 @@ using EntitiesLayer;
 namespace WebApiLayer.Controllers
 {
     /// <summary>
-    /// MathController class contains arithmetics methods
+    /// This class contains arithmetics methods
     /// </summary>
     public class MathController : ApiController
     {
@@ -20,7 +20,7 @@ namespace WebApiLayer.Controllers
         }
 
         /// <summary>
-        /// Add method, adding two numbers
+        /// This method adds two numbers
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
@@ -36,7 +36,7 @@ namespace WebApiLayer.Controllers
         }
 
         /// <summary>
-        /// Divide method, divide two numbers
+        /// This method divides two numbers
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
@@ -54,7 +54,7 @@ namespace WebApiLayer.Controllers
         }
 
         /// <summary>
-        /// Multiply method, mulyiply two numbers
+        /// This method mulyiplies two numbers
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
