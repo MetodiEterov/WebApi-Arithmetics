@@ -7,7 +7,7 @@ using Unity;
 namespace WebApiLayer.Models
 {
     /// <summary>
-    /// UnityResolver class
+    /// The UnityResolver class contains the resolver logic
     /// </summary>
     public class UnityResolver : IDependencyResolver
     {
