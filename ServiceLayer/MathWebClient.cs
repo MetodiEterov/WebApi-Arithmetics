@@ -8,7 +8,7 @@ using RestSharp;
 namespace ServiceLayer
 {
     /// <summary>
-    /// MathWebClient class, responsible for whole business logic
+    /// This class is responsible for the whole business logic
     /// </summary>
     public class MathWebClient : IMathWebClient
     {
@@ -38,7 +38,7 @@ namespace ServiceLayer
         }
 
         /// <summary>
-        /// Divide method, divide two numbers
+        /// This method divides two numbers
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
@@ -54,7 +54,7 @@ namespace ServiceLayer
         }
 
         /// <summary>
-        /// Multiply method, mulyiply two numbers
+        /// This method mulyiplies two numbers
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
