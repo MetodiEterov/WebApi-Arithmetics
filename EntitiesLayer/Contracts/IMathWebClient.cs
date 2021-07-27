@@ -1,7 +1,7 @@
 ﻿namespace EntitiesLayer
 {
     /// <summary>
-    /// Provides basic operation
+    /// Provides basic operations
     /// </summary>
     public interface IMathWebClient
     {
